@@ -1,0 +1,21 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--  COLOURS  -->
+    <Color x:Key="ColorBackgroundEntityFoot">#800080</Color>
+    <Color x:Key="ColorBackgroundEntityFoot2">#200020</Color>
+
+    <SolidColorBrush x:Key="BrushForegroundMessageType" Color="{StaticResource ResourceKey=ColorBackgroundEntityFoot}" />
+    <SolidColorBrush x:Key="BrushForegroundMessageSymbol" Color="{StaticResource ResourceKey=ColorBackgroundEntityFoot}" />
+
+    <SolidColorBrush x:Key="BrushForegroundGroupBox" Color="{StaticResource ResourceKey=ColorBackgroundEntityFoot}" />
+    <SolidColorBrush x:Key="BrushForegroundGroupBoxDisabled" Color="#FF787278" />
+    <SolidColorBrush x:Key="BrushForegroundCombobox" Color="#FF12458F" />
+    <SolidColorBrush x:Key="BrushForegroundDisabled" Color="#FF999B9E" />
+    <SolidColorBrush x:Key="BrushForegroundTextblock" Color="Black" />
+    <SolidColorBrush x:Key="TabItemForeground" Color="#FF12458F" />
+
+    <!--  COLOURS BUTTONS  -->
+    <SolidColorBrush x:Key="BrushForegroundButtonOk" Color="#FF0F60D6" />
+    <SolidColorBrush x:Key="BrushForegroundButtonExit" Color="#FFC93045" />
+
+</ResourceDictionary>

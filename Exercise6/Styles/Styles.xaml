@@ -1,0 +1,106 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="StyleColors.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <!--  STYLES  -->    
+    
+    <Style TargetType="{x:Type TextBlock}" x:Key="PageHeader">
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="FontSize" Value="32" />
+    </Style>
+
+    <ControlTemplate x:Key="ButtonTemplate" TargetType="{x:Type ButtonBase}">
+        <Border x:Name="border" Background="{TemplateBinding Background}" CornerRadius="5" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true">
+            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+        </Border>
+    </ControlTemplate>
+
+    <Style TargetType="{x:Type Button}" x:Key="FooterButton">
+        <Setter Property="HorizontalAlignment" Value="Right" />
+        <Setter Property="Height" Value="40" />
+        <Setter Property="Width" Value="120" />
+    </Style>
+
+    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource FooterButton}" x:Key="buttonOkStyle">
+        <Setter Property="Foreground" Value="{StaticResource BrushForegroundButtonOk}" />
+        <Setter Property="BorderBrush" Value="{StaticResource BrushForegroundButtonOk}" />
+        <Setter Property="Content" Value="Ok" />
+        <Setter Property="Margin" Value="0 0 140 0" />
+    </Style>
+
+    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource FooterButton}" x:Key="buttonExitStyle">
+        <Setter Property="Foreground" Value="{StaticResource BrushForegroundButtonExit}" />
+        <Setter Property="BorderBrush" Value="{StaticResource BrushForegroundButtonExit}" />
+        <Setter Property="Content" Value="Exit" />
+        <Setter Property="Margin" Value="0 0 10 0" />
+    </Style>
+
+    <Style x:Key="GroupboxStyle" TargetType="{x:Type GroupBox}">
+        <Setter Property="Width" Value="300" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="VerticalAlignment" Value="Top" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Padding" Value="5" />
+        <Setter Property="FontFamily" Value="Verdana" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontWeight" Value="Black" />
+        <Setter Property="Foreground" Value="{StaticResource ResourceKey=BrushForegroundGroupBox}" />
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Foreground" Value="{StaticResource ResourceKey=BrushForegroundGroupBoxDisabled}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="TextBlockStyle" TargetType="{x:Type TextBlock}">
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="VerticalAlignment" Value="Top" />
+        <Setter Property="FontFamily" Value="Verdana" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontWeight" Value="Normal" />
+        <Setter Property="Foreground" Value="{StaticResource ResourceKey=BrushForegroundTextblock}" />
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Foreground" Value="{StaticResource ResourceKey=BrushForegroundDisabled}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="TextBlockStyleInfo" TargetType="{x:Type TextBlock}">
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="VerticalAlignment" Value="Top" />
+        <Setter Property="FontFamily" Value="Verdana" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontWeight" Value="Normal" />
+        <Setter Property="Foreground" Value="CornflowerBlue" />
+    </Style>
+
+    <Style x:Key="TabItem" TargetType="{x:Type TabItem}">
+        <Setter Property="Foreground" Value="{StaticResource TabItemForeground}" />
+    </Style>
+
+    <Style
+        x:Key="TextBlockStyleInfoSize10"
+        BasedOn="{StaticResource ResourceKey=TextBlockStyleInfo}"
+        TargetType="{x:Type TextBlock}">
+        <Setter Property="FontSize" Value="10" />
+    </Style>
+
+    <Style x:Key="ComboboxStyle" TargetType="{x:Type ComboBox}">
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="VerticalAlignment" Value="Top" />
+        <Setter Property="Height" Value="22" />
+        <Setter Property="FontFamily" Value="Verdana" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontWeight" Value="Normal" />
+        <Setter Property="Foreground" Value="{StaticResource ResourceKey=BrushForegroundCombobox}" />
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Foreground" Value="{StaticResource ResourceKey=BrushForegroundDisabled}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+</ResourceDictionary>
