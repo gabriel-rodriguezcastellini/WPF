@@ -1,0 +1,250 @@
+﻿<Window x:Class="Design.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Design"        
+        mc:Ignorable="d"
+        Icon="../images.ico"
+        Title="6th Generation Roller Conveyor" 
+        Height="650" 
+        Width="1200">
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="683*"/>
+                <ColumnDefinition Width="383*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="60" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Style="{StaticResource PageHeader}" Text="Roller Conveyor" />
+                <TextBlock Grid.Column="1" Style="{StaticResource PageHeader}" Text="TR 6g" Foreground="#FF999B9E" />
+                <Image Grid.Column="2" HorizontalAlignment="Right" Source="../Images/channels4_profile.jpg" />
+            </Grid>
+            <Grid Grid.Row="1" Background="#eee" Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Image Grid.Column="0" HorizontalAlignment="Center" Source="../Images/download.jpeg" Margin="10 10 10 10" />
+                <TabControl Grid.Column="1" Margin="10 10 10 10" BorderBrush="#999" Padding="0 0 0 100">
+                    <TabItem Header="TR Denomination" Style="{StaticResource TabItem}">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Grid Grid.Column="0" Width="auto">
+                                    <GroupBox Header="CM" Style="{StaticResource GroupboxStyle}" Margin="10,10,0,0">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*" />
+                                                <RowDefinition Height="*" />
+                                            </Grid.RowDefinitions>
+                                            <Grid Grid.Row="0">
+                                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Max. Load" Style="{StaticResource TextBlockStyle}" />
+                                            </Grid>
+                                            <Grid Grid.Row="1">
+                                                <ComboBox Style="{StaticResource ComboboxStyle}">
+                                                    <ComboBoxItem Content="Max 1.500 kg" IsSelected="True" />
+                                                </ComboBox>
+                                            </Grid>
+                                        </Grid>
+                                    </GroupBox>
+                                </Grid>
+                                <Grid Grid.Column="1" Width="auto">
+                                    <GroupBox Header="TP" Style="{StaticResource GroupboxStyle}" Margin="10,10,0,0">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*" />
+                                                <RowDefinition Height="*" />
+                                            </Grid.RowDefinitions>
+                                            <Grid Grid.Row="0">
+                                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Pallet Width" Style="{StaticResource TextBlockStyle}" />
+                                            </Grid>
+                                            <Grid Grid.Row="1">
+                                                <ComboBox Style="{StaticResource ComboboxStyle}">
+                                                    <ComboBoxItem Content="800 mm" IsSelected="True" />
+                                                </ComboBox>
+                                            </Grid>
+                                        </Grid>
+                                    </GroupBox>
+                                </Grid>
+                                <Grid Grid.Column="2" Width="auto">
+                                    <GroupBox Header="H" Style="{StaticResource GroupboxStyle}" Margin="10,10,0,0">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*" />
+                                                <RowDefinition Height="*" />
+                                            </Grid.RowDefinitions>
+                                            <Grid Grid.Row="0">
+                                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Transport level" Style="{StaticResource TextBlockStyle}" />
+                                            </Grid>
+                                            <Grid Grid.Row="1">
+                                                <ComboBox Style="{StaticResource ComboboxStyle}">
+                                                    <ComboBoxItem Content="600 mm" IsSelected="True" />
+                                                </ComboBox>
+                                            </Grid>
+                                        </Grid>
+                                    </GroupBox>
+                                </Grid>
+                            </Grid>
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Grid Grid.Column="0" Width="auto">
+                                    <GroupBox Header="GV" Style="{StaticResource GroupboxStyle}" Margin="10,10,0,0" IsEnabled="False">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*" />
+                                                <RowDefinition Height="*" />
+                                            </Grid.RowDefinitions>
+                                            <Grid Grid.Row="0">
+                                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Guided" Style="{StaticResource TextBlockStyle}" />
+                                            </Grid>
+                                            <Grid Grid.Row="1">
+                                                <ComboBox Style="{StaticResource ComboboxStyle}">
+                                                    <ComboBoxItem Content="No Walloons" IsSelected="True" />
+                                                </ComboBox>
+                                            </Grid>
+                                        </Grid>
+                                    </GroupBox>
+                                </Grid>
+                                <Grid Grid.Column="1" Width="auto">
+                                    <GroupBox Header="M" Style="{StaticResource GroupboxStyle}" Margin="10,10,0,0">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*" />
+                                                <RowDefinition Height="*" />
+                                            </Grid.RowDefinitions>
+                                            <Grid Grid.Row="0">
+                                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Motor" Style="{StaticResource TextBlockStyle}" />
+                                            </Grid>
+                                            <Grid Grid.Row="1">
+                                                <ComboBox Style="{StaticResource ComboboxStyle}">
+                                                    <ComboBoxItem Content="A - Lenze" IsSelected="True" />
+                                                </ComboBox>
+                                            </Grid>
+                                        </Grid>
+                                    </GroupBox>
+                                </Grid>
+                                <Grid Grid.Column="2" Width="auto">
+                                    <GroupBox Header="LT" Style="{StaticResource GroupboxStyle}" Margin="10,10,0,0">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*" />
+                                                <RowDefinition Height="*" />
+                                            </Grid.RowDefinitions>
+                                            <Grid Grid.Row="0">
+                                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Length" Style="{StaticResource TextBlockStyle}" />
+                                            </Grid>
+                                            <Grid Grid.Row="1">
+                                                <ComboBox Style="{StaticResource ComboboxStyle}">
+                                                    <ComboBoxItem Content="1.340 mm" IsSelected="True" />
+                                                </ComboBox>
+                                            </Grid>
+                                        </Grid>
+                                    </GroupBox>
+                                </Grid>
+                            </Grid>
+                            <Grid Grid.Row="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Grid Grid.Column="0" Width="auto">
+                                    <GroupBox Header="T" Style="{StaticResource GroupboxStyle}" Margin="10,10,0,0">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*" />
+                                                <RowDefinition Height="*" />
+                                            </Grid.RowDefinitions>
+                                            <Grid Grid.Row="0">
+                                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Temperature" Style="{StaticResource TextBlockStyle}" />
+                                            </Grid>
+                                            <Grid Grid.Row="1">
+                                                <ComboBox Style="{StaticResource ComboboxStyle}">
+                                                    <ComboBoxItem Content="AM (0 to 40° C)" IsSelected="True" />
+                                                </ComboBox>
+                                            </Grid>
+                                        </Grid>
+                                    </GroupBox>
+                                </Grid>
+                                <Grid Grid.Column="1" Width="auto">
+                                    <GroupBox Header="E" Style="{StaticResource GroupboxStyle}" Margin="10,10,0,0">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*" />
+                                                <RowDefinition Height="*" />
+                                            </Grid.RowDefinitions>
+                                            <Grid Grid.Row="0">
+                                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Electrical Breakdown" Style="{StaticResource TextBlockStyle}" />
+                                            </Grid>
+                                            <Grid Grid.Row="1">
+                                                <ComboBox Style="{StaticResource ComboboxStyle}">
+                                                    <ComboBoxItem Content="Electric components (Europe)" IsSelected="True" />
+                                                </ComboBox>
+                                            </Grid>
+                                        </Grid>
+                                    </GroupBox>
+                                </Grid>
+                                <Grid Grid.Column="2" Width="auto">
+                                    <GroupBox Header="FRE" Style="{StaticResource GroupboxStyle}" Margin="10,10,0,0">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*" />
+                                                <RowDefinition Height="*" />
+                                            </Grid.RowDefinitions>
+                                            <Grid Grid.Row="0">
+                                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Brake" Style="{StaticResource TextBlockStyle}" />
+                                            </Grid>
+                                            <Grid Grid.Row="1">
+                                                <ComboBox Style="{StaticResource ComboboxStyle}">
+                                                    <ComboBoxItem Content="Brake" IsSelected="True" />
+                                                </ComboBox>
+                                            </Grid>
+                                        </Grid>
+                                    </GroupBox>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </TabItem>
+                    <TabItem Header="Additionals" Style="{StaticResource TabItem}" />
+                </TabControl>
+            </Grid>
+            <Grid Grid.Row="2" Height="60" VerticalAlignment="Center" Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.Background>
+                    <LinearGradientBrush StartPoint="1,0" EndPoint="1,1">
+                        <GradientStop Color="{StaticResource ColorBackgroundEntityFoot}" Offset="0.0" />
+                        <GradientStop Color="{StaticResource ColorBackgroundEntityFoot2}" Offset="1.0" />
+                    </LinearGradientBrush>
+                </Grid.Background>
+                <Button Template="{DynamicResource ButtonTemplate}" Style="{StaticResource buttonOkStyle}" />
+                <Button Template="{DynamicResource ButtonTemplate}" Style="{StaticResource buttonExitStyle}" Click="Button_Click" />
+            </Grid>
+        </Grid>
+    </ScrollViewer>
+</Window>
